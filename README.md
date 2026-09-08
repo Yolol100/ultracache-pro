@@ -1,0 +1,60 @@
+# UltraCache Pro — WordPress Performance & Caching
+
+> **Portfolio project · WordPress/PHP · caching · Core Web Vitals · WooCommerce · frontend optimization**
+
+UltraCache Pro is a modular WordPress performance plugin focused on safe caching and front-end optimization. It combines full-page caching, preload, CSS/JavaScript optimization, media optimization, diagnostics and WooCommerce-aware safeguards.
+
+**Built by:** [Andrew Baeten](https://github.com/Yolol100) · [Portfolio](https://andrewbaeten.nl)
+
+## What problem it solves
+
+Performance work often involves multiple interacting systems: page cache, browser cache, CSS/JS processing, images, fonts, object cache, CDN behaviour and dynamic WooCommerce routes. UltraCache Pro brings those concerns into one controlled plugin while keeping higher-risk optimizations staging-first and reversible.
+
+## Portfolio snapshot
+
+| Area | What it demonstrates |
+| --- | --- |
+| WordPress performance | Full-page caching, preload, browser caching and object-cache integration |
+| Front-end optimization | CSS, JavaScript, fonts, media, WebP/AVIF and responsive image handling |
+| WooCommerce safety | Cart, checkout, account and session-aware cache safeguards |
+| Reliability | Queueing, retries, stale-cache handling, bounded cleanup and fail-safe defaults |
+| Diagnostics | Cache insights, purge history, support reports and Core Web Vitals sampling |
+| Security | Input validation, signed compatibility overlays, secret redaction and safe filesystem boundaries |
+
+## Safe operating model
+
+- Start with conservative caching and media settings.
+- Introduce advanced CSS/JavaScript processing separately on staging.
+- Verify representative templates, forms, consent tools and logged-in behaviour.
+- For WooCommerce, test product, cart, checkout, order and account flows before production rollout.
+- Avoid running multiple tools that rewrite the same cache/CSS/JavaScript output without a documented compatibility plan.
+
+## Requirements
+
+- WordPress 6.3+
+- PHP 8.0+
+- Current stable version: see [`readme.txt`](readme.txt)
+
+## Technical review
+
+Key areas to inspect:
+
+- `advanced-cache.php` — page-cache drop-in behaviour.
+- `includes/` — runtime modules and performance features.
+- `dropins/` — optional cache integrations.
+- `compat/` — compatibility handling.
+- [`COMPATIBILITY.md`](COMPATIBILITY.md) — supported integration boundaries.
+- [`SECURITY.md`](SECURITY.md) — security and reporting policy.
+- [`RELEASING.md`](RELEASING.md) — release process.
+
+The full WordPress.org-style feature, installation, privacy and changelog documentation remains in [`readme.txt`](readme.txt).
+
+## About the developer
+
+I am **Andrew Baeten**, a WordPress Developer & Web Designer with 10+ years of experience across **70+ WordPress projects**. My work combines WordPress, WooCommerce, Elementor, UX, performance, technical SEO and quality-focused delivery.
+
+[Portfolio](https://andrewbaeten.nl) · [LinkedIn](https://www.linkedin.com/in/andrew-baeten-305a1478/) · [Email](mailto:info@andrewbaeten.nl)
+
+## License
+
+GPL-2.0-or-later. See [`LICENSE.txt`](LICENSE.txt).
